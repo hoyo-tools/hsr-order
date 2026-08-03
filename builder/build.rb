@@ -1,0 +1,51 @@
+# frozen_string_literal: true
+
+require 'json'
+require_relative 'missions'
+require_relative 'videos'
+require_relative 'articles'
+
+content = []
+
+versions = VersionHelper::VERSIONS
+
+versions.each do |version|
+  next if version[:version] == 'Pre'
+
+  content.concat(
+    Missions.parse(
+      version[:version],
+      version[:start]
+    )
+  )
+end
+
+video_pages = [
+  'A Moment Among the Stars',
+  'Animated Short',
+  'Character Trailer',
+  'Extended Play'
+]
+
+video_pages.each do |page|
+  content.concat(
+    Videos.parse(page)
+  )
+end
+
+content.concat(
+  Articles.parse('HoYoLAB/Articles')
+)
+
+puts content.group_by { |item| item[:version] }
+            .transform_values(&:count)
+
+puts 'WRITING FILE NOW'
+puts File.expand_path('../content.json')
+
+File.write(
+  'content.json',
+  JSON.pretty_generate(content)
+)
+
+puts "Generated #{content.length} items"

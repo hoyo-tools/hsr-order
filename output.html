@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Honkai: Star Rail Order</title>
+</head>
+<body>
+
+<h1>Honkai: Star Rail Order</h1>
+
+<div style="display: flex; gap: 10px; align-items: center;">
+  <p>Filter by version: </p>
+  <a href="#" data-version="all" class="version-filter">All</a> |
+  <a href="#" data-version="1" class="version-filter">Version 1</a> |
+  <a href="#" data-version="2" class="version-filter">Version 2</a> |
+  <a href="#" data-version="3" class="version-filter">Version 3</a> |
+  <a href="#" data-version="4" class="version-filter">Version 4</a>
+</div>
+
+<div style="display: flex; gap: 5px; align-items: center;">
+  <p>Filter by type: </p>
+<input type="checkbox" class="checkbox" id="mission" name="Mission" checked>
+<label for="mission">Mission</label>
+
+<input type="checkbox" class="checkbox" id="video" name="Video" checked>
+<label for="video">Video</label>
+
+<input type="checkbox" class="checkbox" id="article" name="Article" checked>
+<label for="article">Article</label>
+  <button class="update-button">Update</button>
+</div>
+
+<table border="1" id="missions-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Date</th>
+      <th>Series</th>
+      <th>Type</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- JS will add rows here -->
+  </tbody>
+</table>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

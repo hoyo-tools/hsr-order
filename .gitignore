@@ -1,0 +1,15 @@
+# Ruby
+.bundle
+vendor/bundle
+
+# Generated data
+content.json
+
+# Cache
+cache/
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
