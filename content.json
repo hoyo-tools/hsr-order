@@ -637,11 +637,32 @@
     "series": "Adventure"
   },
   {
+    "title": "Jolted Awake From a Winter Dream",
+    "date": "2023-10-11",
+    "version": "1.4",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
+  },
+  {
     "title": "Clouds Leave No Trace",
     "date": "2023-10-11",
     "version": "1.4",
     "type": "Mission",
     "series": "Companion"
+  },
+  {
+    "title": "A Foxian Tale of the Haunted (Trailblaze Continuance)",
+    "date": "2023-11-15",
+    "version": "1.5",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
+  },
+  {
+    "title": "Crown of the Mundane and Divine",
+    "date": "2023-12-27",
+    "version": "1.6",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
   },
   {
     "title": "The Sound and the Fury",
@@ -861,6 +882,13 @@
     "series": "Adventure"
   },
   {
+    "title": "Finest Duel Under the Pristine Blue (I)",
+    "date": "2024-07-31",
+    "version": "2.4",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
+  },
+  {
     "title": "Swords to Plowshares",
     "date": "2024-07-31",
     "version": "2.4",
@@ -875,6 +903,13 @@
     "series": "Adventure"
   },
   {
+    "title": "Finest Duel Under the Pristine Blue (II)",
+    "date": "2024-09-10",
+    "version": "2.5",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
+  },
+  {
     "title": "By Way of Old",
     "date": "2024-09-10",
     "version": "2.5",
@@ -887,6 +922,13 @@
     "version": "2.5",
     "type": "Mission",
     "series": "Adventure"
+  },
+  {
+    "title": "Banana Outrage: Battles Without Ninja and Humanity",
+    "date": "2024-10-23",
+    "version": "2.6",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
   },
   {
     "title": "Antinomic Waltz",
@@ -1055,6 +1097,13 @@
     "version": "3.4",
     "type": "Mission",
     "series": "Trailblaze"
+  },
+  {
+    "title": "Sweet Dreams and the Holy Grail (Trailblaze Continuance)",
+    "date": "2025-07-02",
+    "version": "3.4",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
   },
   {
     "title": "Resplendent Ambrosia",
@@ -1244,6 +1293,13 @@
     "version": "4.4",
     "type": "Mission",
     "series": "Trailblaze"
+  },
+  {
+    "title": "Imagenae: Holy Grail War (Trailblaze Continuance)",
+    "date": "2026-07-15",
+    "version": "4.4",
+    "type": "Mission",
+    "series": "Trailblaze Continuances"
   },
   {
     "title": "Arcadia Panorama",

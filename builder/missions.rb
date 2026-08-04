@@ -5,6 +5,7 @@ require_relative 'fandom_api'
 class Missions
   TYPES = [
     'Trailblaze Missions',
+    'Trailblaze Continuances',
     'Companion Missions',
     'Adventure Missions',
     'Event Missions',
