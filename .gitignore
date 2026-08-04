@@ -2,9 +2,6 @@
 .bundle
 vendor/bundle
 
-# Generated data
-content.json
-
 # Cache
 cache/
 
