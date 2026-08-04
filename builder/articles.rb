@@ -17,7 +17,7 @@ class Articles
     html = response['parse']['text']['*']
     doc = Nokogiri::HTML(html)
 
-    articles = []
+    events = []
 
     doc.css('table:not(.navbox)').each do |table|
       table.css('tr').each do |row|
@@ -38,7 +38,7 @@ class Articles
 
         title = wiki_title.sub(%r{^HoYoLAB/Articles/}, '')
 
-        articles << {
+        events << {
           title: title,
           wiki_title: wiki_title,
           date: date,
@@ -49,7 +49,7 @@ class Articles
       end
     end
 
-    articles
+    events
   end
 
   def self.clean_date(raw)

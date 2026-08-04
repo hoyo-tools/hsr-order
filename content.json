@@ -3737,5 +3737,243 @@
     "series": "HoYoLAB/Articles",
     "type": "Article",
     "version": "4.4"
+  },
+  {
+    "title": "Boulder Town Super League",
+    "date": "2023-05-19",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.0"
+  },
+  {
+    "title": "Everwinter City Museum Ledger of Curiosities",
+    "date": "2023-06-09",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.1"
+  },
+  {
+    "title": "Tales of the Fantastic",
+    "date": "2023-07-21",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.2"
+  },
+  {
+    "title": "Aurum Alley's Hustle and Bustle",
+    "date": "2023-08-31",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.3"
+  },
+  {
+    "title": "Aetherium Wars",
+    "date": "2023-10-11",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.4"
+  },
+  {
+    "title": "A Foxian Tale of the Haunted",
+    "date": "2023-11-15",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.5"
+  },
+  {
+    "title": "Boulder Town Martial Exhibition",
+    "date": "2023-12-06",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.5"
+  },
+  {
+    "title": "Critter Pick",
+    "date": "2023-12-27",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "1.6"
+  },
+  {
+    "title": "Hanu's Prison Break",
+    "date": "2024-02-08",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.0"
+  },
+  {
+    "title": "Vignettes in a Cup",
+    "date": "2024-03-29",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.1"
+  },
+  {
+    "title": "Clockie: Dreamjoy Memoir",
+    "date": "2024-05-08",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.2"
+  },
+  {
+    "title": "Origami Bird Clash",
+    "date": "2024-06-21",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.3"
+  },
+  {
+    "title": "Saga of Primaveral Blade",
+    "date": "2024-07-31",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.4"
+  },
+  {
+    "title": "Luminary Wardance",
+    "date": "2024-09-10",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.5"
+  },
+  {
+    "title": "Festive Revelry",
+    "date": "2024-09-30",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.5"
+  },
+  {
+    "title": "Sound Hunt Ninjutsu Inscription",
+    "date": "2024-10-25",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.6"
+  },
+  {
+    "title": "Cosmic Home Décor Guide",
+    "date": "2024-12-04",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "2.7"
+  },
+  {
+    "title": "Hypogeum Enigma",
+    "date": "2025-01-22",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.0"
+  },
+  {
+    "title": "The Awooo Firm",
+    "date": "2025-02-28",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.1"
+  },
+  {
+    "title": "Seal Slammers",
+    "date": "2025-04-11",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.2"
+  },
+  {
+    "title": "Legend of the Galactic Baseballer: Demon King",
+    "date": "2025-05-21",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.3"
+  },
+  {
+    "title": "Origami Bird Clash: Official Edition",
+    "date": "2025-07-02",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.4"
+  },
+  {
+    "title": "Fate/stay night",
+    "date": "2025-07-11",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.4"
+  },
+  {
+    "title": "The Chrysos Maze Grand Restaurant",
+    "date": "2025-08-13",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.5"
+  },
+  {
+    "title": "Nice Weather for Dromases",
+    "date": "2025-09-24",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.6"
+  },
+  {
+    "title": "Snack Dash",
+    "date": "2025-11-05",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.7"
+  },
+  {
+    "title": "Chrysos Awoo Championship",
+    "date": "2025-12-17",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.8"
+  },
+  {
+    "title": "Remnants of Twilight",
+    "date": "2026-01-07",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "3.8"
+  },
+  {
+    "title": "Cosmicon, Roll On!",
+    "date": "2026-02-13",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.0"
+  },
+  {
+    "title": "Wispae War Saga",
+    "date": "2026-03-25",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.1"
+  },
+  {
+    "title": "Cosmicon, Roll On Again!",
+    "date": "2026-04-29",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.2"
+  },
+  {
+    "title": "Pixel Plane Rumble",
+    "date": "2026-06-01",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.3"
+  },
+  {
+    "title": "Antigraft Brickbuster",
+    "date": "2026-07-15",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.4"
+  },
+  {
+    "title": "Fate/Star Rail Night",
+    "date": "2026-07-24",
+    "series": "Conventional Memoir",
+    "type": "Event",
+    "version": "4.4"
   }
 ]

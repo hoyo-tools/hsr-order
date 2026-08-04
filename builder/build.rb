@@ -4,6 +4,7 @@ require 'json'
 require_relative 'missions'
 require_relative 'videos'
 require_relative 'articles'
+require_relative 'events'
 
 content = []
 
@@ -35,6 +36,10 @@ end
 
 content.concat(
   Articles.parse('HoYoLAB/Articles')
+)
+
+content.concat(
+  Events.parse('Conventional Memoir')
 )
 
 puts content.group_by { |item| item[:version] }
