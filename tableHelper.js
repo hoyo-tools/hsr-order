@@ -31,12 +31,17 @@ function applyFilters(content) {
   const filterValues = [...document.querySelectorAll(".checkbox:checked")]
     .map(checkbox => checkbox.name);
 
-  let filtered =
-    currentVersion === "all"
-      ? content
-      : content.filter(item =>
-        item.version?.startsWith(currentVersion)
-      );
+  let filtered = null
+  if (currentVersion === "all") {
+    filtered = content
+  }
+  else if (currentVersion === "Pre") {
+    filtered = content.filter(item => item.version?.startsWith(0))
+  }
+  else {
+    filtered = content.filter(item => item.version?.startsWith(currentVersion))
+  }
+
 
   if (filterValues.length > 0) {
     filtered = filtered.filter(item =>
