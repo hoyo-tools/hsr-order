@@ -36,7 +36,7 @@ function applyFilters(content) {
     filtered = content
   }
   else if (currentVersion === "Pre") {
-    filtered = content.filter(item => item.version?.startsWith(0))
+    filtered = content.filter(item => (item.version?.startsWith('0') || item?.version?.startsWith('Pre')))
   }
   else {
     filtered = content.filter(item => item.version?.startsWith(currentVersion))
