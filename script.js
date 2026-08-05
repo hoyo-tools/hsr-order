@@ -9,6 +9,13 @@ async function main() {
   if (!progress) {
     localStorage.setItem("hsr-order-progress", JSON.stringify({}));
   }
+
+  fetch("updated.json")
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector("#last-updated").textContent =
+      `Last updated: ${data.lastUpdated}`;
+    })
 }
 
 main();

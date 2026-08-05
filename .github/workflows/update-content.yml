@@ -39,3 +39,7 @@ jobs:
           git diff --cached --quiet || git commit -m "Update HSR content"
 
           git push
+
+      - name: Create update timestamp
+        run: |
+          echo "{\"lastUpdated\":\"$(date -u +"%Y-%m-%d")\"}" > updated.json
