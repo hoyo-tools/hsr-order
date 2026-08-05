@@ -1,58 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
-  <title>Honkai: Star Rail Order</title>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Honkai: Star Rail - Content Release Order</title>
+  </head>
 
-<h1>Honkai: Star Rail Order</h1>
+  <body>
+    <div class="container">
+      <h1>Honkai: Star Rail - Content Release Order</h1>
 
-<div id="last-updated"></div>
+      <div id="last-updated"></div>
 
-<div style="display: flex; gap: 10px; align-items: center;">
-  <p>Filter by version: </p>
-  <a href="#" data-version="all" class="version-filter">All</a> |
-  <a href="#" data-version="Pre" class="version-filter">Pre</a> |
-  <a href="#" data-version="1" class="version-filter">Version 1</a> |
-  <a href="#" data-version="2" class="version-filter">Version 2</a> |
-  <a href="#" data-version="3" class="version-filter">Version 3</a> |
-  <a href="#" data-version="4" class="version-filter">Version 4</a>
-</div>
+      <div class="table-area">
+        <div class="filters">
+          <div class="version-filter">
+            <span style="font-weight: bold">Version:</span>
 
-<div style="display: flex; gap: 5px; align-items: center;">
-  <p>Filter by type: </p>
-<input type="checkbox" class="checkbox" id="mission" name="Mission" checked>
-<label for="mission">Mission</label>
+            <div class="version-links">
+              <a href="#" data-version="all">All</a> |
+              <a href="#" data-version="Pre">Pre</a> |
+              <a href="#" data-version="1">Version 1</a> |
+              <a href="#" data-version="2">Version 2</a> |
+              <a href="#" data-version="3">Version 3</a> |
+              <a href="#" data-version="4">Version 4</a>
+            </div>
 
-<input type="checkbox" class="checkbox" id="event" name="Event" checked>
-<label for="event">Event</label>
+            <select class="version-select">
+              <option value="all">All</option>
+              <option value="Pre">Pre</option>
+              <option value="1">Version 1</option>
+              <option value="2">Version 2</option>
+              <option value="3">Version 3</option>
+              <option value="4">Version 4</option>
+            </select>
+          </div>
 
-<input type="checkbox" class="checkbox" id="video" name="Video" checked>
-<label for="video">Video</label>
+          <div class="type-filter">
+            <span style="font-weight: bold">Type:</span>
+            <label class="filter-pill">
+              <input type="checkbox" name="Mission" class="checkbox" checked />
+              <span>Mission</span>
+            </label>
 
-<input type="checkbox" class="checkbox" id="article" name="Article" checked>
-<label for="article">Article</label>
-  <button class="update-button">Update</button>
-</div>
+            <label class="filter-pill">
+              <input type="checkbox" name="Event" class="checkbox" checked />
+              <span>Event</span>
+            </label>
 
-<table border="1" id="missions-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Release Date</th>
-      <th>Series</th>
-      <th>Type</th>
-      <th>Version</th>
-      <th>Progress</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- JS will add rows here -->
-  </tbody>
-</table>
+            <label class="filter-pill">
+              <input type="checkbox" name="Video" class="checkbox" checked />
+              <span>Video</span>
+            </label>
 
-<script type="module" src="script.js"></script>
-</body>
+            <label class="filter-pill">
+              <input type="checkbox" name="Article" class="checkbox" checked />
+              <span>Article</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table border="1" id="missions-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>Series</th>
+                <th>Type</th>
+                <th>Version</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS adds rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

@@ -9,8 +9,8 @@ export function getLink(title) {
 }
 
 export function filterTable(content) {
-  document.querySelectorAll(".version-filter").forEach(link => {
-    link.addEventListener("click", event => {
+  document.querySelectorAll(".version-links a").forEach((link) => {
+    link.addEventListener("click", (event) => {
       event.preventDefault();
 
       currentVersion = event.currentTarget.dataset.version;
@@ -18,10 +18,17 @@ export function filterTable(content) {
     });
   });
 
-  document.querySelector(".update-button").addEventListener("click", event => {
-    event.preventDefault();
+  document
+    .querySelector(".version-select")
+    .addEventListener("change", (event) => {
+      currentVersion = event.target.value;
+      applyFilters(content);
+    });
 
-    applyFilters(content);
+  document.querySelectorAll(".checkbox").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      applyFilters(content);
+    });
   });
 
   applyFilters(content);
