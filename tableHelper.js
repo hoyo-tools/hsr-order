@@ -50,6 +50,7 @@ function applyFilters(content) {
 export function populateTable(content) {
   const tbody = document.querySelector("#missions-table tbody");
   tbody.innerHTML = "";
+  const progress = JSON.parse(localStorage.getItem("hsr-order-progress"));
 
   content.sort((a, b) => a.date.localeCompare(b.date));
 
@@ -69,5 +70,30 @@ export function populateTable(content) {
     row.insertCell().textContent = item.series ?? "";
     row.insertCell().textContent = item.type;
     row.insertCell().textContent = item.version ?? "";
+
+    const progress_cell = row.insertCell()
+    progress_cell.classList.add("progress-cell", "clickable")
+
+    const title = row.cells[0].textContent.trim();
+
+    if (progress[title]) {
+      progress_cell.classList.add("completed")
+    }
+
   });
+
+  addProgress();
+}
+
+function addProgress() {
+  document.querySelectorAll(".progress-cell").forEach(cell => {
+    cell.addEventListener("click", (event) => {
+
+      cell.classList.toggle("completed")
+      const progress = JSON.parse(localStorage.getItem("hsr-order-progress"))
+      const title = cell.parentElement.cells[0].textContent
+      progress[title] = true
+      localStorage.setItem("hsr-order-progress", JSON.stringify(progress))
+    });
+  })
 }

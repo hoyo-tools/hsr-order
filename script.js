@@ -4,6 +4,11 @@ async function main() {
   fetch("content.json")
     .then(response => response.json())
     .then(content => tableHelper.filterTable(content))
+
+  const progress = JSON.parse(localStorage.getItem("hsr-order-progress"))
+  if (!progress) {
+    localStorage.setItem("hsr-order-progress", JSON.stringify({}));
+  }
 }
 
 main();
