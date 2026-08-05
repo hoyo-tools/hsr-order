@@ -91,14 +91,23 @@ export function populateTable(content) {
 }
 
 function addProgress() {
+  const progress = JSON.parse(localStorage.getItem("hsr-order-progress"))
+
   document.querySelectorAll(".progress-cell").forEach(cell => {
     cell.addEventListener("click", (event) => {
+      const classList = cell.classList
+      classList.toggle("completed")
 
-      cell.classList.toggle("completed")
-      const progress = JSON.parse(localStorage.getItem("hsr-order-progress"))
-      const title = cell.parentElement.cells[0].textContent
-      progress[title] = true
+      if (classList.contains("completed")) {
+        const title = cell.parentElement.cells[0].textContent
+        progress[title] = true
+      }
+      else {
+        const title = cell.parentElement.cells[0].textContent
+        progress[title] = false
+      }
       localStorage.setItem("hsr-order-progress", JSON.stringify(progress))
     });
   })
+
 }
