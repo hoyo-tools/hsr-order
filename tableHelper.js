@@ -87,6 +87,7 @@ export function populateTable(content) {
     progress_cell.classList.add("progress-cell", "clickable")
 
     const title = row.cells[0].textContent.trim();
+    row.cells[0].classList.add("title-column")
 
     if (progress[title]) {
       progress_cell.classList.add("completed")

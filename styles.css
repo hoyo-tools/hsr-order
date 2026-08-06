@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .container {
@@ -22,7 +22,8 @@ h1 {
 }
 
 .table-area {
-  max-width: 900px;
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -52,54 +53,24 @@ h1 {
 }
 
 table {
-  min-width: 900px;
   border-collapse: collapse;
 }
 
 td,
 th {
   padding: 5px;
-  max-width: 30rem;
   text-align: center;
+}
+
+td:first-child,
+th:first-child {
+  max-width: 30rem;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .version-select {
   display: none;
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 95%;
-  }
-
-  .table-area {
-    max-width: 100%;
-  }
-
-  .version-links {
-    display: none;
-  }
-
-  .version-select {
-    display: inline-block;
-  }
-
-  .type-filter {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 600px) {
-  .type-filter {
-    display: inline-flex;
-    gap: 10px;
-    justify-content: start;
-  }
-}
-
-  .filter-pill {
-    text-align: center;
-  }
 }
 
 .clickable {
@@ -123,6 +94,10 @@ th {
   font-weight: bold;
 }
 
+.filter-pill {
+  text-align: center;
+}
+
 .filter-pill input {
   display: none;
 }
@@ -138,4 +113,31 @@ th {
 .filter-pill input:checked + span {
   background: green;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+
+  .table-area {
+    max-width: 100%;
+  }
+
+  .version-links {
+    display: none;
+  }
+
+  .version-select {
+    display: inline-block;
+  }
+
+  .type-filter {
+    flex-wrap: wrap;
+  }
+
+  td:first-child,
+  th:first-child {
+    max-width: 200px;
+  }
 }
