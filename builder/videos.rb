@@ -8,10 +8,10 @@ require_relative 'fandom_api'
 require_relative 'version_helper'
 
 class Videos
-  def self.parse(page)
+  def self.parse(id, page)
     data = FandomApi.fetch(
       action: 'parse',
-      page: page,
+      **(id ? { pageid: id } : { page: page }),
       prop: 'text'
     )
 

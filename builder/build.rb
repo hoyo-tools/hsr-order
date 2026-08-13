@@ -21,16 +21,17 @@ versions.each do |version|
   )
 end
 
-video_pages = [
-  'A Moment Among the Stars',
-  'Animated Short',
-  'Character Trailer',
-  'Extended Play'
-]
+video_pages = {
+  'A Moment Among the Stars': 35630,
+  'Animated Short': 6609,
+  'Character Trailer': 6020,
+  'Extended Play': 36980
+}
 
-video_pages.each do |page|
+
+video_pages.each do |title, id|
   content.concat(
-    Videos.parse(page)
+    Videos.parse(id, title)
   )
 end
 
