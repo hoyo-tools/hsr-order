@@ -4,8 +4,21 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(
+    90deg,
+    #151936 0%,
+    #3f3a7d 15%,
+    #6256cd 28%,
+    #6256cd 72%,
+    #3f3a7d 85%,
+    #151936 100%
+  );
+  color: #e8e9f2;
 }
 
+* {
+  color: inherit;
+}
 .container {
   max-width: 1400px;
   width: 90%;
@@ -16,13 +29,41 @@ h1 {
   text-align: center;
 }
 
+.table-wrapper {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+a {
+  color: #eee7ff;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #d9a7ff;
+  text-underline-offset: 3px;
+  text-shadow: 0 0 8px rgba(217, 167, 255, 0.5);
+}
+
 #last-updated {
   text-align: center;
   margin-bottom: 15px;
 }
 
 .table-area {
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -47,13 +88,9 @@ h1 {
   gap: 3px;
 }
 
-.table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 td,
@@ -90,7 +127,7 @@ th:first-child {
 
 .completed::before {
   content: "✓";
-  color: green;
+  color: rgb(1, 181, 1);
   font-weight: bold;
 }
 
