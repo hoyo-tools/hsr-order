@@ -29,18 +29,12 @@ h1 {
   text-align: center;
 }
 
-.table-wrapper {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 table {
-  border-collapse: separate;
-  border-spacing: 0;
   background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 a {
@@ -63,7 +57,7 @@ a:hover {
 }
 
 .table-area {
-  width: 100%;
+  width: fit-content;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -71,8 +65,14 @@ a:hover {
 .filters {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 15px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .version-filter,
@@ -86,11 +86,6 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 3px;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
 }
 
 td,
@@ -167,6 +162,7 @@ th:first-child {
 
   .version-select {
     display: inline-block;
+    color: black;
   }
 
   .type-filter {
