@@ -19,6 +19,7 @@ body {
 * {
   color: inherit;
 }
+
 .container {
   max-width: 1400px;
   width: 90%;
@@ -29,12 +30,18 @@ h1 {
   text-align: center;
 }
 
-
 table {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-spacing: 0;
   border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 a {
@@ -62,21 +69,31 @@ a:hover {
   margin: 0 auto;
 }
 
-.filters {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
 .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-.version-filter,
+.filters {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.version-filter {
+  grid-column: 1;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .type-filter {
+  grid-column: 1 / -1;
+  grid-row: 2;
+
   display: flex;
   align-items: center;
   gap: 10px;
@@ -88,10 +105,40 @@ a:hover {
   gap: 3px;
 }
 
-td,
-th {
-  padding: 5px;
+.collapse-button {
+  grid-column: 2;
+  grid-row: 1;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+
+  color: #151936;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 32px;
   text-align: center;
+  text-indent: -1px;
+
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #e8e9f2;
+
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.collapse-button:hover {
+  transform: scale(1.05);
+  background: #ffffff;
 }
 
 td:first-child,
@@ -147,16 +194,20 @@ th:first-child {
   color: white;
 }
 
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 12px;
   }
+
   .container {
     width: 95%;
-  }
-
-  .table-area {
-    max-width: 100%;
   }
 
   .version-links {
@@ -172,15 +223,65 @@ th:first-child {
     flex-wrap: wrap;
   }
 
+  .collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   td:first-child,
   th:first-child {
     max-width: 200px;
   }
-}
 
-footer {
-  margin-top: 3rem;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.8rem;
+  .table-area {
+    width: 100%;
+  }
+
+  .table-wrapper {
+    width: 100%;
+  }
+
+  /*
+    Expanded table:
+    use its natural width and allow horizontal scrolling.
+  */
+  #missions-table {
+    width: max-content;
+    min-width: 100%;
+  }
+
+  /*
+    Collapsed table:
+    JS generates only:
+    Title | Version | Progress
+  */
+  #missions-table.collapsed {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  /*
+    Title takes the remaining space.
+  */
+  #missions-table.collapsed th:first-child,
+  #missions-table.collapsed td:first-child {
+    width: auto;
+  }
+
+  /*
+    Version column.
+  */
+  #missions-table.collapsed th:nth-child(2),
+  #missions-table.collapsed td:nth-child(2) {
+    width: 75px;
+  }
+
+  /*
+    Progress column.
+  */
+  #missions-table.collapsed th:nth-child(3),
+  #missions-table.collapsed td:nth-child(3) {
+    width: 60px;
+  }
 }

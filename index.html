@@ -1,22 +1,36 @@
 <!doctype html>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Honkai: Star Rail - Content Release Order</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6E90N0X8HS"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6E90N0X8HS"
+    ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-6E90N0X8HS');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-6E90N0X8HS");
     </script>
-
   </head>
 
   <body>
@@ -49,8 +63,17 @@
             </select>
           </div>
 
+          <button
+            class="collapse-button"
+            aria-label="Collapse table"
+            title="Collapse table"
+          >
+            ‹›
+          </button>
+
           <div class="type-filter">
             <span style="font-weight: bold">Type:</span>
+
             <label class="filter-pill">
               <input type="checkbox" name="Mission" class="checkbox" checked />
               <span>Mission</span>
@@ -74,7 +97,7 @@
         </div>
 
         <div class="table-wrapper">
-          <table border="1" id="missions-table">
+          <table id="missions-table">
             <thead>
               <tr>
                 <th>Title</th>
@@ -85,6 +108,7 @@
                 <th>Progress</th>
               </tr>
             </thead>
+
             <tbody>
               <!-- JS adds rows here -->
             </tbody>
@@ -93,15 +117,14 @@
       </div>
     </div>
 
-      <footer>
-    <p>
-      Information provided by the
-      <a href="https://honkai-star-rail.fandom.com/" target="_blank">
-        Honkai: Star Rail Wiki
-      </a>.
-      This is a fan-made tracker and may contain errors or omissions.
-    </p>
-  </footer>
+    <footer>
+      <p>
+        Information provided by the
+        <a href="https://honkai-star-rail.fandom.com/" target="_blank">
+          Honkai: Star Rail Wiki </a
+        >. This is a fan-made tracker and may contain errors or omissions.
+      </p>
+    </footer>
 
     <script type="module" src="script.js"></script>
   </body>
