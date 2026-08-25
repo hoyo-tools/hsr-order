@@ -81,6 +81,14 @@ a:hover {
 
 .table-wrapper {
   width: 100%;
+  scrollbar-width: none;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #25264a;
 }
 
 .filters {
@@ -233,7 +241,7 @@ footer {
 
   td:first-child,
   th:first-child {
-    max-width: 200px;
+    max-width: 100px;
   }
 
   .table-area {
@@ -250,13 +258,11 @@ footer {
     max-height: calc(100vh - 1rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    transform: perspective(0);
   }
 
-  th {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: #25264a;
+  td {
+    max-width: 85px;
   }
 
   #missions-table {
@@ -271,16 +277,16 @@ footer {
 
   #missions-table.collapsed th:first-child,
   #missions-table.collapsed td:first-child {
-    width: auto;
+    width: 100px;
   }
 
   #missions-table.collapsed th:nth-child(2),
   #missions-table.collapsed td:nth-child(2) {
-    width: 75px;
+    width: 25px;
   }
 
   #missions-table.collapsed th:nth-child(3),
   #missions-table.collapsed td:nth-child(3) {
-    width: 60px;
+    width: 25px;
   }
 }
