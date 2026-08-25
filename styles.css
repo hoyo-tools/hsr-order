@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
   background: linear-gradient(
@@ -34,7 +40,7 @@ table {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-spacing: 0;
-  border-collapse: collapse;
+  border-collapse: separate;
 }
 
 td,
@@ -42,6 +48,10 @@ th {
   padding: 5px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+  background: #25264a;
 }
 
 a {
@@ -70,8 +80,7 @@ a:hover {
 }
 
 .table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 .filters {
@@ -84,7 +93,6 @@ a:hover {
 .version-filter {
   grid-column: 1;
   grid-row: 1;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -93,7 +101,6 @@ a:hover {
 .type-filter {
   grid-column: 1 / -1;
   grid-row: 2;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -108,16 +115,13 @@ a:hover {
 .collapse-button {
   grid-column: 2;
   grid-row: 1;
-
   display: none;
   align-items: center;
   justify-content: center;
-
   width: 32px;
   height: 32px;
   padding: 0;
   margin: 0;
-
   color: #151936;
   font-family: Arial, sans-serif;
   font-size: 17px;
@@ -125,11 +129,9 @@ a:hover {
   line-height: 32px;
   text-align: center;
   text-indent: -1px;
-
   border: 1px solid #aaa;
   border-radius: 50%;
   background: #e8e9f2;
-
   cursor: pointer;
   transition:
     transform 0.15s ease,
@@ -238,48 +240,45 @@ footer {
     width: 100%;
   }
 
+  /*
+    The table wrapper is the mobile scrolling container.
+    This gives sticky headers a vertical scroll container
+    while retaining horizontal scrolling.
+  */
   .table-wrapper {
     width: 100%;
+    max-height: calc(100vh - 1rem);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /*
-    Expanded table:
-    use its natural width and allow horizontal scrolling.
-  */
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #25264a;
+  }
+
   #missions-table {
     width: max-content;
     min-width: 100%;
   }
 
-  /*
-    Collapsed table:
-    JS generates only:
-    Title | Version | Progress
-  */
   #missions-table.collapsed {
     width: 100%;
     table-layout: fixed;
   }
 
-  /*
-    Title takes the remaining space.
-  */
   #missions-table.collapsed th:first-child,
   #missions-table.collapsed td:first-child {
     width: auto;
   }
 
-  /*
-    Version column.
-  */
   #missions-table.collapsed th:nth-child(2),
   #missions-table.collapsed td:nth-child(2) {
     width: 75px;
   }
 
-  /*
-    Progress column.
-  */
   #missions-table.collapsed th:nth-child(3),
   #missions-table.collapsed td:nth-child(3) {
     width: 60px;
