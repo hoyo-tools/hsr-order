@@ -10,6 +10,19 @@ export function getLink(title) {
     .replace(/:/g, "%3A")}`;
 }
 
+const latestProgressButton = document.getElementById("latest-progress-button");
+
+latestProgressButton.addEventListener("click", () => {
+  const rows = document.getElementsByClassName("progress-cell");
+  const latest = [...rows]
+    .filter((row) => row.classList.contains("completed"))
+    .at(-1);
+
+  if (!latest) return
+
+  latest.scrollIntoView({ block: "start" });
+});
+
 export function filterTable(content) {
   // Restore saved checkbox filters
   const savedTypes = JSON.parse(
