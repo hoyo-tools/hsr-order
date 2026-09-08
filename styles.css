@@ -155,6 +155,9 @@ td:first-child,
 th:first-child {
   max-width: 30rem;
   white-space: normal;
+}
+
+td {
   overflow-wrap: break-word;
 }
 
