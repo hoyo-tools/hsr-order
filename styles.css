@@ -263,6 +263,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
   }
 
   td:first-child,
