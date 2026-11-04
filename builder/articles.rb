@@ -5,12 +5,13 @@ require 'date'
 
 require_relative 'fandom_api'
 require_relative 'version_helper'
+require 'pp'
 
 class Articles
-  def self.parse(page)
+  def self.parse(page, id)
     response = FandomApi.fetch(
       action: 'parse',
-      page: page,
+      pageid: id,
       prop: 'text'
     )
 

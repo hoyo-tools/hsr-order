@@ -36,7 +36,7 @@ video_pages.each do |title, id|
 end
 
 content.concat(
-  Articles.parse('HoYoLAB/Articles')
+  Articles.parse('HoYoLAB/Articles', 41486)
 )
 
 content.concat(
